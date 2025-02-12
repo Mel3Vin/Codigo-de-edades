@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class MayorEdad {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Leer edades
+        System.out.print("Ingresa la edad de la primera persona: ");
+        int edad1 = scanner.nextInt();
+        System.out.print("Ingresa la edad de la segunda persona: ");
+        int edad2 = scanner.nextInt();
+        System.out.print("Ingresa la edad de la tercera persona: ");
+        int edad3 = scanner.nextInt();
+
+        // Determinar la mayor edad
+        int mayor;
+        if (edad1 >= edad2 && edad1 >= edad3) {
+            mayor = edad1;
+        } else if (edad2 >= edad1 && edad2 >= edad3) {
+            mayor = edad2;
+        } else {
+            mayor = edad3;
+        }
+
+        // Mostrar la mayor edad
+        System.out.println("La mayor edad es: " + mayor);
+
+        scanner.close();
+    }
+}
